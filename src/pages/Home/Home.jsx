@@ -1,15 +1,33 @@
-import { getTrendingMovies, getSearchMovie } from 'api/Api';
+import { getTrendingMovies } from 'shared/api/Api';
+import { useState, useEffect } from 'react';
+import { MovieList } from 'components/MovieList/MovieList';
 
 export default function Home() {
+  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const result = await getTrendingMovies();
+        setMovies(result.results);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchMovies();
+  }, [movies]);
+
   return (
     <main>
-      <h1>Welcome</h1>
-      <img src="https://via.placeholder.com/960x240" alt="" />
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-        laboriosam placeat incidunt rem illum animi nemo quibusdam quia
-        voluptatum voluptate.
-      </p>
+      <h1>Trending today</h1>
+      <MovieList movies={movies} />
     </main>
   );
 }

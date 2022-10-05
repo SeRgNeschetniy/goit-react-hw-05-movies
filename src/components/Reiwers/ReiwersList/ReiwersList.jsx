@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ReiwersList({ movieReiwers }) {
   const results = movieReiwers.map(({ id, author, content }) => {
     return (

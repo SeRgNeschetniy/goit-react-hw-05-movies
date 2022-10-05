@@ -1,4 +1,9 @@
-import { Container, Description, Poster, Wrapper } from './MovieCard.module';
+import {
+  Container,
+  Description,
+  Poster,
+  Wrapper,
+} from 'components/MovieCard/MovieCard.module';
 import { Link, Outlet } from 'react-router-dom';
 
 export default function MovieCard({ movie }) {

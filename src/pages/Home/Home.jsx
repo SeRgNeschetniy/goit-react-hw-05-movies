@@ -4,21 +4,21 @@ import { MovieList } from 'components/MovieList/MovieList';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  //  const [error, setError] = useState(null);
+  //  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        setLoading(true);
-        setError(null);
+        //      setLoading(true);
+        //    setError(null);
 
         const result = await getTrendingMovies();
         setMovies(result.results);
       } catch (error) {
-        setError(error);
+        //     setError(error);
       } finally {
-        setLoading(false);
+        //     setLoading(false);
       }
     };
     fetchMovies();

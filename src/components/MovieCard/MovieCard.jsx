@@ -3,8 +3,10 @@ import {
   Description,
   Poster,
   Wrapper,
+  NavTab,
+  Link,
 } from 'components/MovieCard/MovieCard.module';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import imgPlaceholder from 'images/img-placeholder.png';
 
 export default function MovieCard({ movie }) {
@@ -47,14 +49,14 @@ export default function MovieCard({ movie }) {
         </Description>
       </Wrapper>
       <div>
-        <ul>
+        <NavTab>
           <li>
             <Link to="cast">Cast</Link>
           </li>
           <li>
             <Link to="reiwers">Reiwers</Link>
           </li>
-        </ul>
+        </NavTab>
         <Outlet />
       </div>
     </Container>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   height: 450px;
@@ -24,4 +25,21 @@ export const Wrapper = styled.div`
     rgba(220.5, 220.5, 220.5, 1) 150px,
     rgba(220.5, 220.5, 220.5, 0.84) 100%
   );
+`;
+
+export const NavTab = styled.ul`
+  display: flex;
+`;
+
+export const Link = styled(NavLink)`
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+
+  &.active {
+    color: white;
+    background-color: #032541;
+  }
 `;

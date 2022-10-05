@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Container } from './App.module';
 import AppBar from './AppBar/AppBar';
 import Cast from './Cast/Cast';
-import Reviews from './Reviews/Reviews';
+import Reviews from './Reiwers/Reiwers';
 
 export const App = () => {
   return (

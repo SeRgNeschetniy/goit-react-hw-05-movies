@@ -6,7 +6,6 @@ const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   params: {
     api_key: API_KEY,
-    language: 'uk',
   },
 });
 
@@ -36,5 +35,5 @@ export const getMovieCredits = async id => {
 
 export const getMovieReviews = async id => {
   const { data } = await instance.get(`/movie/${id}/reviews`);
-  return data;
+  return data.results;
 };

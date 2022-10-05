@@ -1,9 +1,9 @@
 import Home from 'pages/Home/Home';
+import MovieDetails from 'pages/MovieDetails/MovieDetails';
 import Movies from 'pages/Movies/Movies';
 import { Route, Routes } from 'react-router-dom';
 import { Container } from './App.module';
 import AppBar from './AppBar/AppBar';
-import MovieDetails from './MovieDetails/MovieDetails';
 
 export const App = () => {
   return (

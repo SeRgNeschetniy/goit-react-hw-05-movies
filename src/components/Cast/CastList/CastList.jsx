@@ -1,20 +1,30 @@
+import imgPlaceholder from 'images/img-placeholder.png';
+import {
+  CastContainer,
+  CastItem,
+} from 'components/Cast/CastList/CastList.module';
+
 export default function CastList({ movieCast }) {
   const results = movieCast.map(item => {
     const { id, profile_path, original_name, character } = item;
 
     return (
-      <li key={id}>
+      <CastItem key={id}>
         <img
           src={
-            profile_path ? `https://image.tmdb.org/t/p/w500${profile_path}` : ''
+            profile_path
+              ? `https://image.tmdb.org/t/p/w500${profile_path}`
+              : imgPlaceholder
           }
           alt={original_name}
         />
-        <p>Name: {original_name}</p>
-        <p>Character: {character}</p>
-      </li>
+        <p>
+          <b>{original_name ? original_name : '...'}</b>
+        </p>
+        <p>{character ? character : '...'}</p>
+      </CastItem>
     );
   });
 
-  return <ul>{results}</ul>;
+  return <CastContainer>{results}</CastContainer>;
 }

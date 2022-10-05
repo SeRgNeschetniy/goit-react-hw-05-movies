@@ -24,6 +24,10 @@ export default function Home() {
     fetchMovies();
   }, [movies]);
 
+  if (!movies) {
+    return;
+  }
+
   return (
     <main>
       <h1>Trending today</h1>

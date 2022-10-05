@@ -5,6 +5,7 @@ import {
   Wrapper,
 } from 'components/MovieCard/MovieCard.module';
 import { Link, Outlet } from 'react-router-dom';
+import imgPlaceholder from 'images/img-placeholder.png';
 
 export default function MovieCard({ movie }) {
   const {
@@ -21,7 +22,13 @@ export default function MovieCard({ movie }) {
   return (
     <Container backdrop_path={backdrop}>
       <Wrapper>
-        <Poster src={`https://image.tmdb.org/t/p/w500/${poster_path}`} />
+        <Poster
+          src={
+            poster_path
+              ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+              : imgPlaceholder
+          }
+        />
         <Description>
           <h1>{title}</h1>
           <p>

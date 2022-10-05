@@ -26,5 +26,7 @@ export default function MovieDetails() {
     fetchMovie();
   }, [movieId]);
 
+  console.log(movie);
+
   return <>{movie && <MovieCard movie={movie} />}</>;
 }

@@ -37,9 +37,16 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: 500;
+  border: 1px solid #032541;
+  margin-right: 10px;
 
   &.active {
     color: white;
     background-color: #032541;
   }
+`;
+
+export const WrapperDesc = styled.div`
+  margin-top: 30px;
+  margin-bottom: 10px;
 `;

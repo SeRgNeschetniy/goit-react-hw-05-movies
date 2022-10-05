@@ -1,10 +1,10 @@
+import MovieCard from 'components/MovieCard/MovieCard';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getMovieById } from 'shared/api/Api';
-import { Container, Description, Poster } from './MovieDetails.module';
 
 export default function MovieDetails() {
-  const [Movie, setMovie] = useState(0);
+  const [movie, setMovie] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
@@ -26,26 +26,5 @@ export default function MovieDetails() {
     fetchMovie();
   }, [movieId]);
 
-  const { poster_path, title, vote_average, overview, genres } = Movie;
-  console.log('data', Movie);
-
-  return (
-    <Container>
-      {Movie && (
-        <>
-          <Poster src={`https://image.tmdb.org/t/p/w500/${poster_path}`} />
-          <Description>
-            <h1>{title}</h1>
-            <p>
-              User score : <b>{vote_average ? vote_average : '...'}</b>
-            </p>
-            <h2>Overview</h2>
-            <p>{overview ? overview : '...'}</p>
-            <h2>Genres</h2>
-            <p>{genres ? genres.map(item => item.name).join(', ') : '...'}</p>
-          </Description>
-        </>
-      )}
-    </Container>
-  );
+  return <>{movie && <MovieCard movie={movie} />}</>;
 }

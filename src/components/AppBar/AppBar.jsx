@@ -1,4 +1,4 @@
-import { Header, Link } from './AppBar.module';
+import { Header, Link } from 'components/AppBar.module';
 
 export default function AppBar() {
   return (

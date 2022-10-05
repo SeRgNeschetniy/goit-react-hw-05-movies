@@ -2,10 +2,10 @@ import Home from 'pages/Home/Home';
 import MovieDetails from 'pages/MovieDetails/MovieDetails';
 import Movies from 'pages/Movies/Movies';
 import { Route, Routes } from 'react-router-dom';
-import { Container } from './App.module';
-import AppBar from './AppBar/AppBar';
-import Cast from './Cast/Cast';
-import Reviews from './Reiwers/Reiwers';
+import { Container } from 'components/App.module';
+import AppBar from 'components/AppBar/AppBar';
+import Cast from 'components/Cast/Cast';
+import Reviews from 'components/Reiwers/Reiwers';
 
 export const App = () => {
   return (

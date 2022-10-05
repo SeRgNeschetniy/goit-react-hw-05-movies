@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function CastList({ movieCast }) {
   const results = movieCast.map(item => {
     const { id, profile_path, original_name, character } = item;

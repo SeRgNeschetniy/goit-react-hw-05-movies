@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCredits } from 'shared/api/Api';
-import CastList from './CastList/CastList';
+import CastList from 'components/CastList/CastList';
 
 export default function Cast() {
   const [movieCast, setMovieCast] = useState(0);

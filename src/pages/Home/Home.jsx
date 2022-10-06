@@ -22,7 +22,7 @@ export default function Home() {
       }
     };
     fetchMovies();
-  }, [movies]);
+  }, []);
 
   if (!movies) {
     return;

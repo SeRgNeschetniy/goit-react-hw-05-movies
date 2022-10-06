@@ -11,8 +11,6 @@ export default function Reiwers() {
     getMovieReviews(movieId).then(setMovieReiwers);
   }, [movieId]);
 
-  console.log(movieReiwers);
-
   if (!movieReiwers) {
     return;
   }

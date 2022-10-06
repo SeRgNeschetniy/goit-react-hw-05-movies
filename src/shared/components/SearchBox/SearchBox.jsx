@@ -1,4 +1,8 @@
-import { Wrapper, Input, Icon } from 'components/SearchBox/SearchBox.module';
+import {
+  Wrapper,
+  Input,
+  Icon,
+} from 'shared/components/SearchBox/SearchBox.module';
 
 export default function SearchBox({ value, onChange }) {
   return (

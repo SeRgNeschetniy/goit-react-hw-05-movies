@@ -1,5 +1,5 @@
-import { MovieList } from 'components/MovieList/MovieList';
-import SearchBox from 'components/SearchBox/SearchBox';
+import { MovieList } from 'shared/components/MovieList/MovieList';
+import SearchBox from 'shared/components/SearchBox/SearchBox';
 import { useSearchParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getSearchMovie } from 'shared/api/Api';

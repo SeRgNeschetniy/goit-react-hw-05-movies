@@ -1,6 +1,6 @@
 import { getTrendingMovies } from 'shared/api/Api';
 import { useState, useEffect } from 'react';
-import { MovieList } from 'components/MovieList/MovieList';
+import { MovieList } from 'shared/components/MovieList/MovieList';
 import Loader from 'shared/components/Loader/Loader';
 import Notify from 'shared/components/Notify/Notify';
 

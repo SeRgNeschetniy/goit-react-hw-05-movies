@@ -7,10 +7,13 @@ import {
   Link,
   WrapperDesc,
 } from 'components/MovieCard/MovieCard.module';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import imgPlaceholder from 'images/img-placeholder.png';
 
 export default function MovieCard({ movie }) {
+  const location = useLocation();
+  const from = location.state?.from ?? '/movies';
+
   const {
     poster_path,
     title,
@@ -54,10 +57,14 @@ export default function MovieCard({ movie }) {
       <WrapperDesc>
         <NavTab>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link state={{ from }} to="cast">
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to="reiwers">Reiwers</Link>
+            <Link state={{ from }} to="reiwers">
+              Reiwers
+            </Link>
           </li>
         </NavTab>
         <Outlet />

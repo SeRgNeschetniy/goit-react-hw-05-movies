@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import imgPlaceholder from 'images/img-placeholder.png';
 import { MovieWrapp, MovieItem } from './MovieList.module';
 
 export const MovieList = ({ movies }) => {
+  const location = useLocation();
   const elements = movies.map(({ id, title, poster_path }) => (
     <MovieItem key={id}>
-      <Link to={`/movies/${id}`}>
+      <Link to={`/movies/${id}`} state={{ from: location }}>
         <img
           src={
             poster_path

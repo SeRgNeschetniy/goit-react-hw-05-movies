@@ -15,5 +15,9 @@ export default function Cast() {
     return;
   }
 
+  if (movieCast.length === 0) {
+    return <p>We don't have any cast for this movie.</p>;
+  }
+
   return <CastList movieCast={movieCast} />;
 }

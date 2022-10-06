@@ -4,7 +4,7 @@ import { getMovieReviews } from 'shared/api/Api';
 import ReiwersList from 'components/Reiwers/ReiwersList/ReiwersList';
 
 export default function Reiwers() {
-  const [movieReiwers, setMovieReiwers] = useState(0);
+  const [movieReiwers, setMovieReiwers] = useState([]);
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -13,6 +13,10 @@ export default function Reiwers() {
 
   if (!movieReiwers) {
     return;
+  }
+
+  if (movieReiwers.length === 0) {
+    return <p>We don't have any reviews for this movie.</p>;
   }
 
   return <ReiwersList movieReiwers={movieReiwers} />;

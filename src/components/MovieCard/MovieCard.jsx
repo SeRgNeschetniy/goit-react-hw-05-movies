@@ -55,17 +55,14 @@ export default function MovieCard({ movie }) {
         </Wrapper>
       </Container>
       <WrapperDesc>
+        <h2>Additional information</h2>
         <NavTab>
-          <li>
-            <Link state={{ from }} to="cast">
-              Cast
-            </Link>
-          </li>
-          <li>
-            <Link state={{ from }} to="reiwers">
-              Reiwers
-            </Link>
-          </li>
+          <Link state={{ from }} to="cast">
+            Cast
+          </Link>
+          <Link state={{ from }} to="reiwers">
+            Reiwers
+          </Link>
         </NavTab>
         <Outlet />
       </WrapperDesc>

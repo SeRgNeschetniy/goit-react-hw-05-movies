@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   );
 `;
 
-export const NavTab = styled.ul`
+export const NavTab = styled.div`
   display: flex;
 `;
 
